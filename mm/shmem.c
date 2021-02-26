@@ -62,8 +62,8 @@ static struct vfsmount *shm_mnt;
 #include <linux/migrate.h>
 #include <linux/highmem.h>
 #include <linux/seq_file.h>
-#include <linux/magic.h>
 #include <linux/syscalls.h>
+#include <linux/magic.h>
 #include <linux/fcntl.h>
 #include <uapi/linux/memfd.h>
 
@@ -2494,7 +2494,6 @@ static int shmem_show_options(struct seq_file *seq, struct dentry *root)
 	shmem_show_mpol(seq, sbinfo->mpol);
 	return 0;
 }
-
 
 #define MFD_NAME_PREFIX "memfd:"
 #define MFD_NAME_PREFIX_LEN (sizeof(MFD_NAME_PREFIX) - 1)
